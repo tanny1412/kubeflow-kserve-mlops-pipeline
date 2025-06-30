@@ -121,6 +121,7 @@ export AWS_SECRET_ACCESS_KEY=<your-secret>
 ### 8. Create S3 Bucket
 
 Example: `kubeflow-bucket-iquant01`
+![Model Artifact in S3 Bucket](docs/screenshots/model-joblib.png)
 
 ---
 
@@ -134,6 +135,7 @@ kubectl port-forward -n kubeflow svc/ml-pipeline-ui 8080:80
 
 - Visit: `localhost:8080`
 - Create run, provide secrets (S3 credentials), and start execution
+![Successful Pipeline Run](docs/screenshots/successful-pipeline-run.png)
 
 ---
 
@@ -204,6 +206,7 @@ curl -v -H "Host: $SERVICE_HOSTNAME" \
      http://$INGRESS_HOST:<PORT>/v1/models/sklearn-iris:predict \
      -d @iris-input.json
 ```
+![KServe Prediction Example](docs/screenshots/kserve-prediction.png)
 
 ---
 
